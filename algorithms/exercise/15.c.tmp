@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes){
+    int index = 0;
+    int **res = NULL;
+    int *end = nums + numsSize - 1;
+    int *start = nums;
+    while(start < end){
+        int *p = start + 1;
+        while(p < end){
+            if(*p + *start + *end == 0){
+                int array[3] = {};
+                array[0] = *start;
+                array[1] = *p;
+                array[2] = *end;
+                res = (int **)realloc(sizeof(int *) * (index+1));
+                returnColumnSizes = (int **)realloc(sizeof(int *) * (index+1));
+                
+                res[index++] = array; 
+            }
+            p++;
+        }
+        start++;
+        end--;
+        int num1 = nums[i];
+    }
+}
+
+int main(){
+    threeSum();
+}
