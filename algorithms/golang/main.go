@@ -20,19 +20,25 @@ func main() {
 	// maxNumbersWithLog([]int{1, 3, 3, 2, -1, 5}, 9)
 	// maxNumbersWithLog([]int{1, 3, 3, 2, -1, 5}, 1)
 	// maxNumbersWithLog([]int{1, 3, -1, -3, 5, 3, 6, 7}, 3)
-	head := linklist.ListNode{}
-	pre := &head
-	start := 1
-	for i := start; i < start+5; i++ {
-		node := linklist.ListNode{Data: i, Next: nil}
+	var head *linklist.ListNode = nil
+	pre := head
+	array := []int{1, 3, 3, 2, 3, 3, 1}
+	for _, v := range array {
+		node := linklist.ListNode{Data: v, Next: nil}
+		if head == nil {
+			head = &node
+			pre = head
+		}
 		pre.Next = &node
 		pre = &node
 	}
 	// reverseLinklistWithLog(&head)
 	// head.OddEvenList2()
-	printLinklist(&head)
-	node := head.ReverseLinklistWithCertainDistance2(4, 7)
-	printLinklist(node)
+	printLinklist(head)
+	// node := head.ReverseLinklistWithCertainDistance2(4, 7)
+	// printLinklist(node)
+	result := head.PalindromeLinklist()
+	fmt.Println(result)
 }
 
 func maxNumbersWithLog(numbers []int, k int) {
