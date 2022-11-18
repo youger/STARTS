@@ -24,7 +24,7 @@ func main() {
 	pre := head
 	array := []int{1, 3, 3, 2, 3, 3, 1}
 	for _, v := range array {
-		node := linklist.ListNode{Data: v, Next: nil}
+		node := linklist.ListNode{Val: v, Next: nil}
 		if head == nil {
 			head = &node
 			pre = head
@@ -70,7 +70,7 @@ func reverseLinklistWithLog(head *linklist.ListNode) {
 
 func printLinklist(head *linklist.ListNode) {
 	for head != nil {
-		fmt.Print(head.Data, "->")
+		fmt.Print(head.Val, "->")
 		head = head.Next
 	}
 	fmt.Println("nil")

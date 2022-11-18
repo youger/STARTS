@@ -1,7 +1,7 @@
 package linklist
 
 type ListNode struct {
-	Data int
+	Val  int
 	Next *ListNode
 }
 
