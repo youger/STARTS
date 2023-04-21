@@ -1,6 +1,7 @@
 package main
 
 import (
+	"algorithms/array"
 	"fmt"
 )
 
@@ -30,7 +31,7 @@ func maxNumbersWithLog(numbers []int, k int) {
 
 func threeNumbersSumWithLog(numbers []int, target int) {
 	fmt.Println("Get ", numbers)
-	ret := threeNumbersSum(numbers, 0)
+	ret := array.ThreeNumbersSum(numbers, 0)
 	fmt.Println(ret)
 	fmt.Println("======================")
 }

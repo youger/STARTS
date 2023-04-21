@@ -1,6 +1,6 @@
-package main
+package array
 
-func twoNumbersSum(numbers []int, target int) (ret [][]int) {
+func TwoNumbersSum(numbers []int, target int) (ret [][]int) {
 	count := len(numbers)
 	ret = make([][]int, 0)
 	if count < 2 {
@@ -25,7 +25,7 @@ func twoNumbersSum(numbers []int, target int) (ret [][]int) {
 	return
 }
 
-func threeNumbersSum(numbers []int, target int) (ret [][]int) {
+func ThreeNumbersSum(numbers []int, target int) (ret [][]int) {
 	count := len(numbers)
 	ret = make([][]int, 0)
 	if count < 3 {
@@ -38,7 +38,7 @@ func threeNumbersSum(numbers []int, target int) (ret [][]int) {
 		}
 		flags[val] = true
 		target2 := target - val
-		ret2 := twoNumbersSum(remove(numbers, i), target2)
+		ret2 := TwoNumbersSum(remove(numbers, i), target2)
 		for _, array := range ret2 {
 			ret = append(ret, append(array, val))
 		}

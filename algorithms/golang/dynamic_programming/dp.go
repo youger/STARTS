@@ -8,12 +8,13 @@ func uniquePaths(m int, n int) int {
 	if n <= 0 || m <= 0 {
 		return 0
 	}
-	if n > 1 {
-		path += uniquePaths(n-1, m)
-	}
 
 	if m > 1 {
 		path += uniquePaths(n, m-1)
+	}
+
+	if n > 1 {
+		path += uniquePaths(n-1, m)
 	}
 	return path
 }
