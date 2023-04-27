@@ -18,9 +18,3 @@ func hIndex(citations []int) int {
 	}
 	return h
 }
-
-func swap(a *int, b *int) {
-	tmp := a
-	a = b
-	b = tmp
-}
